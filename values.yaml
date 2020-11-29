@@ -19,7 +19,7 @@ ingressApi:
     #     - chart-example.local
 
 ingressGateway:
-  enabled: false
+  enabled: true
     # hosts:
     # - ipfs-gateway.localhost.localdomain
     # - localhost.localdomain/ipfs-gateway
@@ -32,7 +32,7 @@ ingressGateway:
     #     - chart-example.local
 
 swarm:
-  enabled: false
+  enabled: true
   type: ClusterIP
   # loadBalancerIP: ""
   # externalIP: ""
@@ -54,7 +54,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: "-"
   size: "8Gi"
   accessModes:
     - ReadWriteOnce

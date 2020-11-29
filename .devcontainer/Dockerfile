@@ -27,6 +27,9 @@ RUN curl -sSL -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernete
 # Install Helm
 RUN curl -s https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash -
 
+# install azcli
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
 # Script copies localhost's ~/.kube/config file into the container and swaps out 
 # localhost for host.docker.internal on bash/zsh start to keep them in sync.
 COPY copy-kube-config.sh /usr/local/share/
